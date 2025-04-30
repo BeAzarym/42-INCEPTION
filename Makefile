@@ -5,7 +5,7 @@ req:
 	@sudo mkdir -p /home/$(USER)/data/wordpress
 
 compose:
-	@sudo docker-compose -f ./srcs/docker-compose.yml build
+	@sudo docker-compose -f ./srcs/docker-compose.yml build --no-cache
 
 up: req compose
 	@sudo docker-compose -f srcs/docker-compose.yml up -d
